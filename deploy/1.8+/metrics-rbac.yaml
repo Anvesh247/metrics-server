@@ -44,7 +44,7 @@ metadata:
   labels:
     k8s-app: metrics-server
   name: metrics-server-auth-reader
-  namespace: kube-system
+  namespace: springboot
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
@@ -52,7 +52,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: metrics-server
-  namespace: kube-system
+  namespace: springboot
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -67,7 +67,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: metrics-server
-  namespace: kube-system
+  namespace: springboot
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -82,4 +82,4 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: metrics-server
-  namespace: kube-system
+  namespace: springboot
