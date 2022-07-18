@@ -10,6 +10,6 @@ spec:
   insecureSkipTLSVerify: true
   service:
     name: metrics-server
-    namespace: kube-system
+    namespace: springboot
   version: v1beta1
   versionPriority: 100
